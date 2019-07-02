@@ -22,6 +22,7 @@ def correlation_measures(data_generator, steps, feature_num, file_dir):
                 # only consider lower triangular matrix
                 data_value[i, j] = pearsonr(data[i], data[j])[0]
         data_matrix += data_value
+        steps -= 1
 
     # calculate average
     data_matrix /= steps
